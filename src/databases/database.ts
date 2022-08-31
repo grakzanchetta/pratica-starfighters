@@ -1,0 +1,19 @@
+import dotenv from "dotenv";
+import pg from "pg";
+dotenv.config();
+
+const { Pool } = pg;
+
+const user = 'postgres';
+const password = 'postgres';
+const host = 'localhost';
+const port = 5432;
+const database = 'starfighters';
+
+export const connection = new Pool({
+    user,
+    password,
+    host,
+    port,
+    database
+  });
